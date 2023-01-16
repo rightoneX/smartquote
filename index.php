@@ -50,74 +50,24 @@
     </symbol>
   </svg>
 
-
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand link-dark" href="/">Logo</a>
-
-      <button class="navbar-toggler" style="background-color:#0d6efd;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-        </span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link link-secondary" aria-current="page" href="product.php">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-dark" href="features.php">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-dark" href="about.php">About</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-
-
-
-
+  <?php include 'includes/navigation.inc.php' ?>
 
   <main class="container">
     <div class="bg-light p-5 rounded">
       <h1>Navbar example</h1>
-      <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport.</p>
+      <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fugiat officia quam tempora? Soluta nulla enim necessitatibus. Accusamus nemo dignissimos voluptas esse nihil necessitatibus non repudiandae beatae enim commodi optio facere, assumenda et in, reprehenderit officiis. Asperiores quam ea ad inventore architecto nostrum doloribus eaque consequuntur eligendi. Sapiente iure dolores saepe, illo, nobis impedit doloribus laudantium sit nemo ex velit eaque eum. Autem ipsum animi commodi dignissimos laborum. Obcaecati, nisi. Quam nihil iure harum voluptate!</p>
+      
       <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
     </div>
-
 
     <?php
     // $user = new User('Y', 'X');
     // echo $user->getName();
     ?>
-
-
-
   </main>
 
+  <?php include 'includes/footer.inc.php' ?>
 
-
-
-  <div class="container">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Product</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-      </ul>
-      <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
-    </footer>
-  </div>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
