@@ -9,16 +9,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description" content="buildingSMART is the worldwide industry body driving the digital transformation of the built asset industry." />
-	<link rel="canonical" href="192.168.0.105:8000" />
-	<meta property="og:locale" content="en_GB" />
+  <link rel="canonical" href="192.168.0.105:8000" />
 
+  <meta name="theme-color" content="#0d6efd">
 
-  <script src="js/pwa.js"></script>
   <link rel="stylesheet" href="style/main.css">
-  <link rel="manifest" href="manifest.webmanifest">
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style/navbar-top-fixed.css" rel="stylesheet">
-  <title>Blade</title>
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="images/logo192.png" type="image/x-icon">
+
+
+  <script src="/js/pwa.js"></script>
+
+  <title>SmartHome</title>
 </head>
 
 <body>
@@ -50,8 +55,7 @@
     <div class="container-fluid">
       <a class="navbar-brand link-dark" href="/">Logo</a>
 
-      <button class="navbar-toggler"   style="background-color:#0d6efd;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" 
-      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" style="background-color:#0d6efd;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
         </span>
       </button>
@@ -80,23 +84,23 @@
 
 
 
- 
-<main class="container">
-  <div class="bg-light p-5 rounded">
-    <h1>Navbar example</h1>
-    <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport.</p>
-    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
-  </div>
+
+  <main class="container">
+    <div class="bg-light p-5 rounded">
+      <h1>Navbar example</h1>
+      <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport.</p>
+      <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
+    </div>
 
 
- <?php
-  // $user = new User('Y', 'X');
-  // echo $user->getName();
-  ?>
+    <?php
+    // $user = new User('Y', 'X');
+    // echo $user->getName();
+    ?>
 
 
 
-</main>
+  </main>
 
 
 

@@ -1,12 +1,13 @@
 self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open('blade').then((cache) => cache.addAll([
-      '/',
-      '/index.php',
-      '/js/index.js',
-      '/style/main.css',
-    ])),
-  );
+  // e.waitUntil(
+  //   caches.open('blade').then((cache) => cache.addAll([
+  //     '/',
+  //     '/index.php',
+  //     '/js/index.js',
+  //     '/style/main.css',
+  //   ])),
+  // );
+  console.log("installed");
 });
 
 self.addEventListener('fetch', (e) => {
