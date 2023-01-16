@@ -1,0 +1,15 @@
+{
+  "background_color": "gray",
+  "description": "Communication platform",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Communication platform",
+  "short_name": "Blade",
+  "start_url": "/index.php"
+}
