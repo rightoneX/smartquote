@@ -15,11 +15,13 @@
 
   <link rel="stylesheet" href="style/main.css">
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style/navbar-top-fixed.css" rel="stylesheet">
 
   <link rel="manifest" href="/manifest.json">
   <link rel="apple-touch-icon" href="images/logo192.png" type="image/x-icon">
 
+
+
+  <link rel="stylesheet" href="style/app.css">
 
   <script src="/js/pwa.js"></script>
 
@@ -52,23 +54,31 @@
 
   <?php include 'includes/navigation.inc.php' ?>
 
-  <main class="container">
-    <div class="bg-light p-5 rounded">
+  <div class="container">
+    <!-- <div class="bg-light p-5 rounded">
       <h1>Navbar example</h1>
       <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fugiat officia quam tempora? Soluta nulla enim necessitatibus. Accusamus nemo dignissimos voluptas esse nihil necessitatibus non repudiandae beatae enim commodi optio facere, assumenda et in, reprehenderit officiis. Asperiores quam ea ad inventore architecto nostrum doloribus eaque consequuntur eligendi. Sapiente iure dolores saepe, illo, nobis impedit doloribus laudantium sit nemo ex velit eaque eum. Autem ipsum animi commodi dignissimos laborum. Obcaecati, nisi. Quam nihil iure harum voluptate!</p>
-      
+
       <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
-    </div>
+    </div> -->
 
     <?php
     // $user = new User('Y', 'X');
     // echo $user->getName();
     ?>
-  </main>
 
+
+    <?php include 'includes/login.inc.php' ?>
+
+
+  </div>
+
+<div class="footer">
   <?php include 'includes/footer.inc.php' ?>
-
+</div>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="./js/login.js"></script>
 </body>
 
 </html>
