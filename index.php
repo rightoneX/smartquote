@@ -1,4 +1,4 @@
-<?php include 'includes/autoloader.inc.php' ?>
+<?php include 'includes/autoloader.inc.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,16 +25,23 @@
 
 <body>
 
-  <?php include 'includes/navigation.inc.php' ?>
-
-  <?php include 'includes/sidebar.inc.php' ?>
+  <?php 
+    include 'includes/navigation.inc.php';
+    // restricted page
+    include 'includes/sidebar.inc.php';
+  ?>
 
   <div class="container">
-    <?php include 'includes/login.inc.php' ?>
+    <?php
+      $nav = new Navigation("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+      include $nav->page;
+    ?>
   </div>
 
   <div class="footer">
-    <?php include 'includes/footer.inc.php' ?>
+    <?php 
+      include 'includes/footer.inc.php'; 
+    ?>
   </div>
 
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
