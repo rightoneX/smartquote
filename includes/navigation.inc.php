@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <a class="navbar-brand link-dark" href="/">Logo</a>
 
-      <button class="navbar-toggler" style="background-color:#0d6efd;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler btn-main" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
         </span>
       </button>
