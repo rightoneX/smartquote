@@ -3,15 +3,15 @@
     <form class="form" id="login" action="pages/processing/login.pro.php" method="post">
         <h1 class="form__title">Login</h1>
 
-        <!-- <div class="form__message form__message--error"></div> -->
+        <div class="form__message form__message--error"></div>
         <div class="form__input-group">
-            <input type="text" class="form__input" name="email" autofocus placeholder="Email">
-            <!-- <div class="form__input-error-message"></div> -->
+            <input name="email" type="text" class="form__input" autofocus placeholder="Email">
+            <div class="form__input-error-message"></div>
         </div>
 
         <div class="form__input-group">
-            <input type="password" class="form__input" name="password" autofocus placeholder="Password">
-            <!-- <div class="form__input-error-message"></div> -->
+            <input name="password" type="password" class="form__input" autofocus placeholder="Password">
+            <div class="form__input-error-message"></div>
         </div>
 
         <button name="submit" class="form__button" type="submit">Continue</button>

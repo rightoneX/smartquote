@@ -4,7 +4,7 @@
 class Login extends Database
 {
 
-    protected function getUser($email, $pwd)
+    public function getUser($email, $pwd)
     {
 
         $stmt = $this->connect()->prepare('SELECT password FROM users WHERE email = ? AND password = ?;');
@@ -29,10 +29,11 @@ class Login extends Database
             exit();
         }
 
-        $stmt = $this->connect()->prepare('SELECT p* FROM users WHERE email = ? AND password = ?;');
+        $stmt = $this->connect()->prepare('SELECT * FROM users WHERE email = ? AND password = ?;');
 
         $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
         session_start();
+        
         $_SESSION["email"] = $user["email"];
         $_SESSION["name"] = $user["name"];
         $stmt = null;

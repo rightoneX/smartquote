@@ -6,7 +6,7 @@ class LoginController extends Login
     private $pwd;
     private $email;
 
-    public function __construct($pwd, $email)
+    public function __construct($email, $pwd)
     {
         $this->pwd = $pwd;
         $this->email = $email;
@@ -18,7 +18,7 @@ class LoginController extends Login
             header("location: ../index.php?error=emptyinput");
             exit();
         }
-        $this->getUser( $this->pwd, $this->email);
+        $this->getUser($this->email, $this->pwd);
     }
 
     private function emptyInput()

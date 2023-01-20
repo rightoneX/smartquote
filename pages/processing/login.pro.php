@@ -1,30 +1,20 @@
 <?php
-    // include '../../includes/autoloader.inc.php';
+
+
+if(isset($_POST["submit"])){
+
+    $name = $_POST["name"];
+    $email = $_POST["email"];
 
     include '../../classes/Database.class.php';
-
-    if(isset($_POST['email']) && isset($_POST['password'])){
-
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    }
+    include '../../classes/Login.class.php';
+    include '../../classes/LoginController.class.php';
 
 
-    $user = new Database();
+    $login = new LoginController($email, $pwd);
 
-    // echo $user->page;
-    // var_dump($user->select(`SELECT users FROM {$email} WHERE 'password' = {$password}`));
+    $login->getUser($email, $pwd);
 
-    //ToDo
-    //connect to db
-    //pass email and pwd get resul
+    header("location: ../../index.php?error=none");
 
-    // if($user->credentials){
-    //     //gran access
-    // }else{
-    //     //access denied 
-    // }
-
-
-
-    echo $email;
+}
