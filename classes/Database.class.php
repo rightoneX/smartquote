@@ -2,88 +2,100 @@
 
 class Database
 {
- 
+
     private $connection = null;
 
     private $host = "localhost:3306";
     private $user = "root";
     private $pwd = "password";
-    private $dbname = "users";
+    private $dbname = "squote";
 
 
-    public function __construct()
+    // public function __construct()
+    // {
+    //     try {
+    //         $dsn = 'mysql:host=' . $this->host . '; dbname=' . $this->dbname;
+    //         $pdo = new PDO($dsn, $this->user, $this->pwd);
+    //         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+    //         return $pdo;
+    //     } catch (PDOException $e) {
+    //         //thow $error
+    //         print "Error!: " . $e->getMessage() . "<br/";
+    //         die();
+    //     }
+    // }
+
+    public function connect()
     {
-        $dsn = 'mysql:host=' . $this->host . '; dbname=' . $this->dbname;
-        // $pdo = 'ok';
-        $pdo = new PDO($dsn, $this->user, $this->pwd);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        return $pdo;
+        try {
+            $host = "localhost:3306";
+            $user = "root";
+            $pwd = "password";
+            $dbname = "squote";
+
+            $dbh = new PDO("mysql:host={$host};dbname={$dbname};", $user, $pwd);
+            // $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            // $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            return $dbh;
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+            die();
+        }
     }
 
-    // public function __construct($dbhost = "localhost:3306", $dbname = "users", $username = "root", $password = "password")
+    // // Insert a row/s in a Database Table
+    // public function insert($statement = "", $parameters = [])
     // {
     //     try {
 
-    //         $this->connection = new PDO("mysql:host={$dbhost};dbname={$dbname};", $username, $password);
-    //         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //         $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    //         $this->executeStatement($statement, $parameters);
+    //         return $this->connection->lastInsertId();
     //     } catch (Exception $e) {
     //         throw new Exception($e->getMessage());
     //     }
     // }
 
-    // Insert a row/s in a Database Table
-    public function insert($statement = "", $parameters = [])
-    {
-        try {
+    // public function select($statement = "", $parameters = [])
+    // {
+    //     try {
 
-            $this->executeStatement($statement, $parameters);
-            return $this->connection->lastInsertId();
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
+    //         $stmt = $this->executeStatement($statement, $parameters);
+    //         return $stmt->fetchAll();
+    //     } catch (Exception $e) {
+    //         throw new Exception($e->getMessage());
+    //     }
+    // }
 
-    public function select($statement = "", $parameters = [])
-    {
-        try {
+    // public function update($statement = "", $parameters = [])
+    // {
+    //     try {
 
-            $stmt = $this->executeStatement($statement, $parameters);
-            return $stmt->fetchAll();
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
+    //         $this->executeStatement($statement, $parameters);
+    //     } catch (Exception $e) {
+    //         throw new Exception($e->getMessage());
+    //     }
+    // }
 
-    public function update($statement = "", $parameters = [])
-    {
-        try {
+    // public function remove($statement = "", $parameters = [])
+    // {
+    //     try {
 
-            $this->executeStatement($statement, $parameters);
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
+    //         $this->executeStatement($statement, $parameters);
+    //     } catch (Exception $e) {
+    //         throw new Exception($e->getMessage());
+    //     }
+    // }
 
-    public function remove($statement = "", $parameters = [])
-    {
-        try {
+    // private function executeStatement($statement = "", $parameters = [])
+    // {
+    //     try {
 
-            $this->executeStatement($statement, $parameters);
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
-
-    private function executeStatement($statement = "", $parameters = [])
-    {
-        try {
-
-            $stmt = $this->connection->prepare($statement);
-            $stmt->execute($parameters);
-            return $stmt;
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
+    //         $stmt = $this->connection->prepare($statement);
+    //         $stmt->execute($parameters);
+    //         return $stmt;
+    //     } catch (Exception $e) {
+    //         throw new Exception($e->getMessage());
+    //     }
+    // }
 }
