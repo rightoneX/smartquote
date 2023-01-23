@@ -3,12 +3,12 @@
 class LoginController extends Login
 {
 
-    private $pwd;
+    private $password;
     private $email;
 
-    public function __construct($email, $pwd)
+    public function __construct($email, $password)
     {
-        $this->pwd = $pwd;
+        $this->password = $password;
         $this->email = $email;
     }
 
@@ -18,13 +18,13 @@ class LoginController extends Login
             header("location: ../index.php?error=emptyinput");
             exit();
         }
-        $this->getUser($this->email, $this->pwd);
+        $this->getUser($this->email, $this->password);
     }
 
     private function emptyInput()
     {
         $result;
-        if (empty($this->pwd) || empty($this->email)) {
+        if (empty($this->password) || empty($this->email)) {
             $result = false;
         } else {
             $result = true;

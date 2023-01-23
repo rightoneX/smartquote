@@ -1,20 +1,21 @@
 <?php
 
-
 if(isset($_POST["submit"])){
 
-    $name = $_POST["name"];
+    $password = $_POST["password"];
     $email = $_POST["email"];
 
     include '../../classes/Database.class.php';
     include '../../classes/Login.class.php';
     include '../../classes/LoginController.class.php';
 
+    $login = new LoginController($email, $password);
 
-    $login = new LoginController($email, $pwd);
+    $login->getUser($email, $password);
 
-    $login->getUser($email, $pwd);
-
-    header("location: ../../index.php?error=none");
-
+    // show the current tasks 
+    session_start();
+    $_SESSION["userid"] = 56;
+    
+    header("location: /tasks"); 
 }

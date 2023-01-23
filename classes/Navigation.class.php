@@ -8,9 +8,9 @@ class Navigation
     {
         $path = parse_url($url);
 
+      
         switch ($path['path']) {
-
-            // restricted page
+                // restricted page
             case '/tasks':
                 $this->page = 'pages/tasks.page.php';
                 break;
@@ -51,7 +51,7 @@ class Navigation
                 $this->page =  'pages/logout.page.php';
                 break;
 
-            // publicly accessible pages 
+                // publicly accessible pages 
             case '/':
                 $this->page = 'pages/welcome.page.php';
                 break;
@@ -79,7 +79,7 @@ class Navigation
             case '/about':
                 $this->page =  'pages/about.page.php';
                 break;
-                
+
             default:
                 $this->page = 'pages/404.page.php';
                 break;

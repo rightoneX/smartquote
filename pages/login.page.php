@@ -1,3 +1,5 @@
+<?php if(!isset($_SESSION["userid"])){ header("location: /"); } ?>
+
 <div class="login">
 
     <form class="form" id="login" action="pages/processing/login.pro.php" method="post">
@@ -25,8 +27,6 @@
     </form>
 
 
-
-
     <form class="form form--hidden" id="createAccount" action="pages/processing/signup.pro.php" method="post">
         <h1 class="form__title">Create Account</h1>
         <div class="form__message form__message--error"></div>
@@ -52,3 +52,4 @@
         </p>
     </form>
 </div>
+
