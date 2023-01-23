@@ -29,10 +29,10 @@ class Login extends Database
             exit();
         } elseif ($checkpassword == true) {
 
-            // $stmt = $this->connect()->prepare('SELECT * FROM users WHERE email = ? AND password = ?;');
-            // $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmt = $this->connect()->prepare('SELECT * FROM users WHERE email = ? AND password = ?;');
+            $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
             session_start();
-            // $_SESSION["userid"] = $user[0]["id"];
+            $_SESSION["userid"] = $user[0]["id"];
             // $_SESSION["email"] = $email[0]["email"];
             // $_SESSION["name"] = $user[0]["name"];
             // $_SESSION["surename"] = $user[0]["surename"];
@@ -40,7 +40,5 @@ class Login extends Database
             $_SESSION["userid"] = "logedin";
             $stmt = null;
         }
-        session_start();
-        // $_SESSION["userid"] = 56;
     }
 }

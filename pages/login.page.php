@@ -1,4 +1,4 @@
-<?php if(!isset($_SESSION["userid"])){ header("location: /"); } ?>
+<?php if(isset($_SESSION["userid"])){ header("location: /"); } ?>
 
 <div class="login">
 
