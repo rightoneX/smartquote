@@ -13,9 +13,5 @@ if(isset($_POST["submit"])){
 
     $login->getUser($email, $password);
 
-    // show the current tasks 
-    session_start();
-    $_SESSION["userid"] = 56;
-    
     header("location: /tasks"); 
 }
