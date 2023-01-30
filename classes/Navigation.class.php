@@ -8,7 +8,6 @@ class Navigation
     {
         $path = parse_url($url);
 
-      
         switch ($path['path']) {
                 // restricted page
             case '/tasks':

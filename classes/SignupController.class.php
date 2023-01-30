@@ -22,7 +22,7 @@ class SignupController extends Signup
             header("location: ../index.php?error=emptyinput");
             exit();
         }
-        if ($this->invalidname() == false) {
+        if ($this->invalidName() == false) {
             header("location: ../index.php?error=username");
             exit();
         }
@@ -38,6 +38,8 @@ class SignupController extends Signup
             header("location: ../index.php?error=useroremailtaken");
             exit();
         }
+        // var_dump($this->name);
+        // die();
         $this->setUser($this->name, $this->pwd, $this->email);
     }
 
@@ -52,7 +54,7 @@ class SignupController extends Signup
         return $result;
     }
 
-    private function invalidname()
+    private function invalidName()
     {
         $result;
         if (!preg_match("/^[a-zA-Z0-9]*$/", $this->name)) {

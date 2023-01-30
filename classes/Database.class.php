@@ -7,7 +7,7 @@ class Database
 
     private $host = "localhost:3306";
     private $user = "root";
-    private $pwd = "password";
+    private $pwd = "Password!";
     private $dbname = "squote";
 
 
@@ -31,7 +31,7 @@ class Database
         try {
             $host = "localhost:3306";
             $user = "root";
-            $pwd = "password";
+            $pwd = "Password!";
             $dbname = "squote";
 
             $dbh = new PDO("mysql:host={$host};dbname={$dbname};", $user, $pwd);
