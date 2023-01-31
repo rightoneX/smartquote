@@ -7,7 +7,8 @@ class Database
 
     private $host = "localhost:3306";
     private $user = "root";
-    private $pwd = "Password!";
+    private $pwd = "password";
+    // private $pwd = "Password!";
     private $dbname = "squote";
 
 
@@ -29,12 +30,7 @@ class Database
     public function connect()
     {
         try {
-            $host = "localhost:3306";
-            $user = "root";
-            $pwd = "Password!";
-            $dbname = "squote";
-
-            $dbh = new PDO("mysql:host={$host};dbname={$dbname};", $user, $pwd);
+            $dbh = new PDO("mysql:host={$this->host};dbname={$this->dbname};", $this->user, $this->pwd);
             // $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             return $dbh;
