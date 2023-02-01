@@ -38,9 +38,14 @@ class SignupController extends Signup
             header("location: ../index.php?error=useroremailtaken");
             exit();
         }
-        // var_dump($this->name);
-        // die();
-        $this->setUser($this->name, $this->pwd, $this->email);
+
+        // set new user
+        $user = $this->setUser($this->name, $this->pwd, $this->email); 
+
+        if($user){
+        // log in as new user
+            header("location: /tasks");
+        }
     }
 
     private function emptyInput()

@@ -1,8 +1,21 @@
 <?php
 
-class UsersController extends Users{
+class UsersController extends Users
+{
 
-    public function createUser($name, $password, $email){
-        $this->setUser($name, $password, $email);
+    public $name;
+    public $email;
+    public $password;
+
+    public function __construct($name, $email, $password)
+    {
+        $this->name = $name;
+        $this->email = $email;
+        $this->password = $password;
+    }
+
+    public function createUser()
+    {
+        $this->setUser($this->name, $this->email, $this->password);
     }
 }

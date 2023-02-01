@@ -28,6 +28,8 @@ class Signup extends Database{
             header("location: ../index.php?error=stmtfailed");
             exit();
         }
+       $last_id = mysqli_insert_id($stmt);
        $stmt = null;
+       return true;
     }
 }

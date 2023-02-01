@@ -1,6 +1,5 @@
 <?php
 
-
 class Login extends Database
 {
 
@@ -45,6 +44,5 @@ class Login extends Database
             // die();
             $stmt = null;
         }
-
     }
 }

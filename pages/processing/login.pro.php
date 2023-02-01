@@ -1,17 +1,17 @@
 <?php
 
-if(isset($_POST["submit"])){
+if (isset($_POST["submit"])) {
 
-    $password = $_POST["password"];
     $email = $_POST["email"];
+    $password = $_POST["password"];
 
     include '../../classes/Database.class.php';
-    include '../../classes/Login.class.php';
-    include '../../classes/LoginController.class.php';
+    include '../../classes/Users.class.php';
+    include '../../classes/UsersView.class.php';
 
-    $login = new LoginController($email, $password);
+    $login = new UsersView($email, $password);
 
-    $login->getUser($email, $password);
+    $login->loginUser();
 
-    header("location: /tasks"); 
+    header("location: /tasks");
 }

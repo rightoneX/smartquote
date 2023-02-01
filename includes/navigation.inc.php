@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand link-dark" href="/">Logo</a>
+    <a class="navbar-brand link-dark logo" href="/"></a>
 
     <button class="navbar-toggler btn-main" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon">
@@ -19,6 +19,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-primary" type="submit">Search</button>
       </form>
+
     </div>
   </div>
 </nav>
