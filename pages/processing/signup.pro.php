@@ -16,10 +16,10 @@ if (isset($_POST["submit"])) {
 
     $signup->createUser();
 
-    // if all fine the user will be loged-in
-    $login = new UsersView($email, $password);
+    // if all fine the user will be logged in
+    $login = new UsersView();
 
-    $login->loginUser();
+    $login->loginUser($email, $password);
 
     header("location: /tasks");
 }

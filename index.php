@@ -35,13 +35,11 @@
   ?>
 
   <div class="container">
-  <!-- <main> -->
     <?php
-    $current_path = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    $nav = new Navigation($current_path);
-    include $nav->page;
+      $current_path = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+      $nav = new Navigation($current_path);
+      include $nav->page;
     ?>
-  <!-- </main> -->
   </div>
 
   <div class="footer">

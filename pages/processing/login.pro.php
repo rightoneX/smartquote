@@ -9,9 +9,9 @@ if (isset($_POST["submit"])) {
     include '../../classes/Users.class.php';
     include '../../classes/UsersView.class.php';
 
-    $login = new UsersView($email, $password);
+    $login = new UsersView();
 
-    $login->loginUser();
+    $login->loginUser($email, $password);
 
     header("location: /tasks");
 }

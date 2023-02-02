@@ -21,9 +21,8 @@ class Users extends Database
             exit();
         }
 
-        $passwordHashed = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        $checkpassword = password_verify($password, $passwordHashed[0]['password']);
+        $passwordHashed = $stmt->fetch();
+        $checkpassword = password_verify($password, $passwordHashed->password);
 
         if ($checkpassword == false) { // wrong password
 
@@ -34,7 +33,7 @@ class Users extends Database
 
             $stmt = $this->connect()->prepare('SELECT * FROM users WHERE email = ?');
             $stmt->execute(array($email));
-            $user = $stmt->fetchAll();
+            $user = $stmt->fetch();
             $stmt = null;
             return $user; // return user data
         }
@@ -46,14 +45,14 @@ class Users extends Database
         $sql = "SELECT email FROM users WHERE email = ?";
         $stmt = $this->connect()->prepare($sql);
 
-        if(!$stmt->execute(array($email))){ // check if sql accept command
+        if (!$stmt->execute(array($email))) { // check if sql accept command
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
             exit();
         }
 
-        if($stmt->rowCount() > 0 ){ // check if the email already in the db
-            $stmt = null;            
+        if ($stmt->rowCount() > 0) { // check if the email already in the db
+            $stmt = null;
             header("location: ../index.php?error=emailtaken");
             exit();
         }
@@ -63,5 +62,19 @@ class Users extends Database
         $stmt->execute([$name, $email,  password_hash($password, PASSWORD_DEFAULT)]);
     }
 
+    protected function profileUserData($id)
+    {
+        // check if email already in use
+        $sql = "SELECT * FROM users WHERE id = ?";
+        $stmt = $this->connect()->prepare($sql);
 
+        if (!$stmt->execute(array($id))) { // check if sql accept command
+            $stmt = null;
+            header("location: ../index.php?error=usernotfound");
+            exit();
+        }
+        $user = $stmt->fetch();
+        $stmt = null;
+        return $user; // return user data
+    }
 }

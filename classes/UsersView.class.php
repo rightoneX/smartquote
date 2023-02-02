@@ -3,25 +3,32 @@
 class UsersView extends Users
 {
 
-    public $email;
-    public $password;
+    // public $email;
+    // public $password;
 
-    public function __construct($email, $password)
-    {
-        $this->email = $email;
-        $this->password = $password;
-    }
+    // public function __construct()
+    // {
+        // $this->email = $email;
+        // $this->password = $password;
+    // }
 
-    public function loginUser()
+    public function loginUser($email, $password)
     {
-        $user = $this->getUser($this->email, $this->password);
+        $user = $this->getUser($email, $password);
         // start the user session
         session_start();
-        $_SESSION["userid"] = $user[0]["id"];
-        $_SESSION["name"] = $user[0]["name"];
-        $_SESSION["email"] = $user[0]["email"];
+        $_SESSION["userid"] = $user->id;
+        $_SESSION["name"] = $user->name;
+        $_SESSION["email"] = $user->email;
     }
 
+    public function profileUser($id)
+    {
+        $user = $this->profileUserData($id);
+        // var_dump($user);
+        // die();
+        return $user;
+    }
 
     // public function showUser(){
     //     $results = $this->getUser($this->email, $this->password);

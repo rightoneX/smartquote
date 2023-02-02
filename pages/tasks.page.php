@@ -65,8 +65,8 @@
   echo(" Task of user user ID is - " . $_SESSION["userid"]);
   echo( $_SESSION["name"]);
   echo(  $_SESSION["email"]);
-  echo(  $_SESSION["surename"] );
-  echo(  $_SESSION["position"]);
+  // echo(  $_SESSION["surename"] );
+  // echo(  $_SESSION["position"]);
     ?> 
 </h1>
 
