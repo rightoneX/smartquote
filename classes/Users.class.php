@@ -62,7 +62,7 @@ class Users extends Database
         $stmt->execute([$name, $email,  password_hash($password, PASSWORD_DEFAULT)]);
     }
 
-    protected function profileUserData($id)
+    protected function userProfile($id)
     {
         // check if email already in use
         $sql = "SELECT * FROM users WHERE id = ?";
