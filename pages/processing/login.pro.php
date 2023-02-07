@@ -13,5 +13,5 @@ if (isset($_POST["submit"])) {
 
     $login->loginUser($email, $password);
 
-    header("location: /tasks");
+    header("location: /dashboard");
 }

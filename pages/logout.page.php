@@ -1,14 +1,8 @@
-<?php if(!isset($_SESSION["userid"])){ header("location: /"); } ?>
+<?php 
 
-<h1>Goodby</h1>
+if (!isset($_SESSION["userid"])) {
+    header("location: /");
+}
 
-<?php
 include_once('pages/processing/logout.pro.php');
-    // session_unset();
-    // session_destroy();
-    
-    // header("Refresh:0");
-
-    //ToDo refresh 
-    // header("location: /");
-?>
+echo "<meta http-equiv='refresh' content='0'>";

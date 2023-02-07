@@ -3,7 +3,6 @@
 class Users extends Database
 {
 
-
     protected function getUser($email, $password)
     {
         $sql = "SELECT * FROM users WHERE email = ?";
@@ -76,5 +75,20 @@ class Users extends Database
         $user = $stmt->fetch();
         $stmt = null;
         return $user; // return user data
+    }
+
+    protected function updateProfile($id, $name, $surename, $position)
+    {
+        $sql = "UPDATE users SET name = ?, surename = ?, position = ? WHERE id = ?";
+        $stmt = $this->connect()->prepare($sql);
+
+
+        if(!$stmt->execute(array($name, $surename, $position, $id))){
+            $stmt = null;
+            header("location: ../index.php?error=profilenotupdated");
+            exit();
+        }
+        $stmt = null;
+        return true;
     }
 }

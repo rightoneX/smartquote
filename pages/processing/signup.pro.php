@@ -12,14 +12,11 @@ if (isset($_POST["submit"])) {
     include '../../classes/UsersController.class.php';
     include '../../classes/UsersView.class.php';
 
-    $signup = new UsersController($name, $email, $password);
-
-    $signup->createUser();
-
-    // if all fine the user will be logged in
-    $login = new UsersView();
-
+    $signup = new UsersController();
+    $signup->createUser($name, $email, $password);
+    
+    $login = new UsersView();// if all fine the user will be logged in
     $login->loginUser($email, $password);
 
-    header("location: /tasks");
+    header("location: /dashboard");
 }

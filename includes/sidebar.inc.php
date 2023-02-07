@@ -10,20 +10,14 @@
         <div class="scrollbar" id="style-1">
             <ul>
                 <li>
-                    <a href="/">
-                        <i class="bi bi-house menu-icon"></i>
-                        <span class="nav-text">Home</span>
+                    <a href="dashboard">
+                        <!-- <i class="bi bi-speedometer2 menu-icon"></i>  -->
+                        <i class="bi bi-grid-1x2 menu-icon"></i> 
+                        <span class="nav-text">Dashboard</span>
                     </a>
                 </li>
 
                 <hr>
-                <!--    
-                <li>
-                    <a href="#">
-                        <i class="fa fa-user fa-lg"></i>
-                        <span class="nav-text">Login</span>
-                    </a>
-                </li> -->
 
                 <li>
                     <a href="tasks">

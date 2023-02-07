@@ -10,6 +10,10 @@ class Navigation
 
         switch ($path['path']) {
                 // restricted page
+            case '/dashboard':
+                $this->page = 'pages/dashboard.page.php';
+                break;
+
             case '/tasks':
                 $this->page = 'pages/tasks.page.php';
                 break;
