@@ -77,13 +77,12 @@ class Users extends Database
         return $user; // return user data
     }
 
-    protected function updateProfile($id, $name, $surename, $position)
+    protected function updateProfile($data) // $name, $surename, $position, $dob,$phone, $id
     {
-        $sql = "UPDATE users SET name = ?, surename = ?, position = ? WHERE id = ?";
+        $sql = "UPDATE users SET name = ?, surename = ?, position = ?, dob = ?, phone=? WHERE id = ?";
         $stmt = $this->connect()->prepare($sql);
 
-
-        if(!$stmt->execute(array($name, $surename, $position, $id))){
+        if (!$stmt->execute($data)) {
             $stmt = null;
             header("location: ../index.php?error=profilenotupdated");
             exit();

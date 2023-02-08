@@ -1,16 +1,11 @@
-<?php 
+<?php
 
 if (!isset($_SESSION["userid"])) {
     header("location: /");
 }
 
-// ToDo
-// get user data based on id
-// update user data form
 $user = new UsersView();
 $profile = $user->getUserProfile($_SESSION["userid"]);
-// echo ($profile->name);
-
 ?>
 
 <div class="page-content">
@@ -22,7 +17,9 @@ $profile = $user->getUserProfile($_SESSION["userid"]);
         <div class="section-content">
             <h3>Company Information</h3>
         </div>
+
         <div class="form-row">
+
             <div class="col-md-4 mb-3">
                 <label for="validationCustom01">First name</label>
                 <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="First name" value="<?php echo ($profile->name) ?>" required>
@@ -30,6 +27,7 @@ $profile = $user->getUserProfile($_SESSION["userid"]);
                     Looks good!
                 </div>
             </div>
+
             <div class="col-md-4 mb-3">
                 <label for="validationCustom02">Last name</label>
                 <input type="text" name="surename" class="form-control" id="validationCustom02" placeholder="Last name" value="<?php echo ($profile->surename) ?>" required>
@@ -37,6 +35,7 @@ $profile = $user->getUserProfile($_SESSION["userid"]);
                     Looks good!
                 </div>
             </div>
+
         </div>
 
         <div class="form-group row col-md-6">
@@ -45,6 +44,28 @@ $profile = $user->getUserProfile($_SESSION["userid"]);
                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo ($profile->email) ?>">
             </div>
         </div>
+
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Phone number</label>
+            <input type="phone" name="phone" class="form-control" id="validationCustom02" placeholder="Phone number" value="<?php echo ($profile->phone) ?>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-3 col-sm-6">
+            <label for="startDate">Day of birth</label>
+            <input name="dob" id="startDate" class="form-control" type="date" value="<?php echo ($profile->dob) ?>" />
+            <span id="startDateSelected"></span>
+        </div>
+
+
+
+
+
+
 
         <div class="form-row">
             <div class="col-md-4 mb-3">
@@ -55,10 +76,10 @@ $profile = $user->getUserProfile($_SESSION["userid"]);
                 </div>
             </div>
         </div>
- 
-        <button type="submit" name="submit"class="btn btn-primary">Update</button>
+
+        <button type="submit" name="submit" class="btn btn-primary">Update</button>
     </form>
-</div>  
+</div>
 
 
 
