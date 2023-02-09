@@ -79,3 +79,10 @@ body {
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
+
+
+.error_msg{
+  color: var(--color-error);
+  padding: 3px 0 3px 0;
+  margin: 5px 0 5px 0;
+}

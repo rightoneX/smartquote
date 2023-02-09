@@ -1,5 +1,0 @@
-17.01
-processing/login.pro.php
-    connection to db classes/Database.class.php
-        extract data
-        check the user credentials 

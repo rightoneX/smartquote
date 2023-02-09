@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
     include '../../classes/UsersView.class.php';
 
     $signup = new UsersController();
-    $signup->createUser($name, $email, $password);
+    $signup->createUser($name, $email, $password, $pwdRepeat);
     
     $login = new UsersView();// if all fine the user will be logged in
     $login->loginUser($email, $password);
