@@ -1,6 +1,6 @@
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('SmartHome').then((cache) => cache.addAll([
+    caches.open('Smart Quote').then((cache) => cache.addAll([
       '/',
       '/index.php',
       '/js/index.js',

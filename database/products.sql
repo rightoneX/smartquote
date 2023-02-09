@@ -9,6 +9,7 @@ CREATE TABLE `products` (
   `bar_code` varchar(64) DEFAULT NULL,
   `type` varchar(64) DEFAULT NULL,
   `brand` varchar(64) DEFAULT NULL,
+  `weight` decimal(12,3) DEFAULT NULL,
   `description` text(255) DEFAULT NULL,
   `info_path` text(255) DEFAULT NULL,
   `creation_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -18,7 +19,10 @@ CREATE TABLE `products` (
 
 
 INSERT INTO products
-  (name, code, order_code, stock_code, bar_code, type, brand, description, info_path)    
+
+  (name, code, order_code, stock_code, bar_code, type, brand, weight, description, info_path)    
 VALUES 
 ('DDRC1220FR-GL', 'DDRC1220FR-GL', '913703243009', '871869688795000', 
-'97809667456487987', 'Dynalite Relay Controllers', 'Philips Dynalite','DDRC1220FR-GL provides control of multiple types of switched loads. 12 channel controller supports switched loads - up to 20A per channel, max. load of 180 A.','HUhw76214g#yuyt')
+'97809667456487987', 'Dynalite Relay Controllers', 'Philips Dynalite', '	
+0.900', 'DDRC1220FR-GL provides control of multiple types of switched loads. 12 channel controller supports switched loads - up to 20A per channel, max. load of 180 A.','HUhw76214g#yuyt')
+  (name, code, order_code, stock_code, bar_code, type, brand, description, info_path)    

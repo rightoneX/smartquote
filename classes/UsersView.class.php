@@ -17,4 +17,5 @@ class UsersView extends Users
     {
         return $this->userProfile($id);
     }
+
 }

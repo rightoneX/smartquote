@@ -7,6 +7,7 @@ class Navigation
     public function __construct($url)
     {
         $path = parse_url($url);
+        // $query = parse_url($url, PHP_URL_QUERY);
 
         switch ($path['path']) {
                 // restricted page
@@ -81,6 +82,11 @@ class Navigation
 
             case '/about':
                 $this->page =  'pages/about.page.php';
+                break;
+
+            // REST API 
+            case '/api':
+                $this->page =  'pages/processing/api_v1.pro.php';
                 break;
 
             default:

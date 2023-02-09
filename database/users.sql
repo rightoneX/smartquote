@@ -26,3 +26,4 @@ VALUES
 ('Merry', 'Jana', '2004-12-22', 'merry@email.com', '64210645284',0, 'staff', '$2y$10$NrOn2M5Lppw1zWMjaE/GGe/LhM2.dJya1HYla4vP9d8uCgye2YjPO',0), 
 ('Juli', 'Jana', '2004-12-22', 'juli@email.com','64213646284', 0, 'staff', '$2y$10$NrOn2M5Lppw1zWMjaE/GGe/LhM2.dJya1HYla4vP9d8uCgye2YjPO',0), 
 ('Becka', 'Jana', '2004-12-22', 'becka@email.com', '64213646284',0, 'staff', '$2y$10$NrOn2M5Lppw1zWMjaE/GGe/LhM2.dJya1HYla4vP9d8uCgye2YjPO',0) 
+

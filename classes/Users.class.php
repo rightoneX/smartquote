@@ -10,13 +10,13 @@ class Users extends Database
 
         if (!$stmt->execute([$email])) { // check if sql accept command
             $stmt = null;
-            header("location: ../index.php?error=stmtfailed");
+            header("location: ../index.php?stmtfailed");
             exit();
         }
 
         if ($stmt->rowCount() == 0) { // check if email in db
             $stmt = null;
-            header("location: ../index.php?error=usernotfound");
+            header("location: ../../login?accessdenied");
             exit();
         }
 
@@ -26,7 +26,7 @@ class Users extends Database
         if ($checkpassword == false) { // wrong password
 
             $stmt = null;
-            header("location: ../index.php?error=wrongpassword");
+            header("location:  ../../login?accessdenied");
             exit();
         } elseif ($checkpassword == true) { // password is correct
 
@@ -52,7 +52,7 @@ class Users extends Database
 
         if ($stmt->rowCount() > 0) { // check if the email already in the db
             $stmt = null;
-            header("location: ../index.php?error=emailtaken");
+            header("location: ../../login?emailtaken");
             exit();
         }
         // if all good, let's creat new account
@@ -60,6 +60,7 @@ class Users extends Database
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$name, $email,  password_hash($password, PASSWORD_DEFAULT)]);
     }
+
 
     protected function userProfile($id)
     {
