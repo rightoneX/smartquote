@@ -1,8 +1,6 @@
-    <nav class="main-menu">
-
-        <div>
-            <a class="logo" href="#">
-            </a>
+    <nav class="main-menu navbar-fixed-left">
+       <div>
+            <a class="logo" href="#"></a>
         </div>
 
         <div class="settings"></div>

@@ -8,14 +8,29 @@ $user = new UsersView();
 $profile = $user->getUserProfile($_SESSION["userid"]);
 ?>
 
-<div class="page-content">
     <div class="page-title">
         <h2>My Profile</h2>
     </div>
 
-    <form action="pages/processing/profile.pro.php" method="post">
+
+    <!-- <form action="pages/processing/profile.pro.php" method="post"> -->
         <div class="section-content">
             <h3>Company Information</h3>
+        </div>
+
+    <!-- </form> -->
+
+   <!-- </div> -->
+
+
+
+   <div class="section-container">
+
+
+
+    <form action="pages/processing/profile.pro.php" method="post">
+        <div class="section-content">
+            <h3>Personal Information</h3>
         </div>
 
         <div class="form-row">
@@ -61,12 +76,6 @@ $profile = $user->getUserProfile($_SESSION["userid"]);
             <span id="startDateSelected"></span>
         </div>
 
-
-
-
-
-
-
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationCustom01">Job position</label>
@@ -79,9 +88,6 @@ $profile = $user->getUserProfile($_SESSION["userid"]);
 
         <button type="submit" name="submit" class="btn btn-primary">Update</button>
     </form>
-</div>
-
-
 
 
 

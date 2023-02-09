@@ -70,7 +70,8 @@
     ?> 
 </h1>
 
-<h1>Dashboard</h1>
+<div class="page-title">Dashboard</div>
+
 
 <!-- <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">Columns with icons</h2>

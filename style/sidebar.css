@@ -9,6 +9,13 @@
     font-family: 'Strait', sans-serif
 }
 
+.navbar-fixed-left {
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
 .scrollbar {
     height: 90%;
     width: 100%;
@@ -167,8 +174,8 @@ nav li {
 }
 
 .menu-icon {
-font-size: 1.5rem;
-padding-left: 15px;
+    font-size: 1.5rem;
+    padding-left: 15px;
 }
 
 .darkerli {

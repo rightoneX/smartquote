@@ -1,5 +1,11 @@
-<?php session_start(); ?>
-<?php include 'includes/autoloader.inc.php'; ?>
+<?php
+session_start();
+
+include 'includes/autoloader.inc.php';
+
+$current_path = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$nav = new Navigation($current_path);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,28 +24,22 @@
   <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style/app.css">
 
-
   <script src="js/pwa.js"></script>
 
   <title>sQuote</title>
 </head>
 
 <body>
-
-  <?php include 'includes/navigation.inc.php'; ?>
-
   <?php
+  include 'includes/navigation.inc.php';
+
   if (isset($_SESSION["userid"])) {
     include 'includes/sidebar.inc.php';
   }
   ?>
 
-  <div class="container">
-    <?php
-      $current_path = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-      $nav = new Navigation($current_path);
-      include $nav->page;
-    ?>
+  <div class="page-content">
+    <?php include $nav->page; ?>
   </div>
 
   <div class="footer">
@@ -51,5 +51,4 @@
   <script src="pages/js/login.js"></script>
 
 </body>
-
 </html>
