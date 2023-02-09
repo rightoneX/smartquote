@@ -25,10 +25,10 @@ class UsersController extends Users
         $this->setUser($name, $email, $password);
     }
 
-    public function updateUser($id, $name, $surename, $position)
+    public function updateUser($data)
     {
-        $result = $this->updateProfile($id, $name, $surename, $position);
-        if ($result) {
+        $result = $this->updateProfile($data);
+        if($result){
             return true;
         }
         return false;
