@@ -1,7 +1,7 @@
 
-DROP TABLE IF EXISTS `industies`;
+DROP TABLE IF EXISTS `industries`;
 
-CREATE TABLE `industies` (
+CREATE TABLE `industries` (
   `id` int NOT NULL AUTO_INCREMENT,
   `code` varchar(4) NOT NULL,
   `name` varchar(128) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `industies` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-INSERT INTO industies 
+INSERT INTO industries 
   (code, name)
 VALUES
 ('0100','Agricultural Production-Crops'),

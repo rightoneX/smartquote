@@ -1,16 +1,10 @@
+<div class="container-fluid">
     <nav class="main-menu navbar-fixed-left">
-       <div>
-            <a class="logo" href="#"></a>
-        </div>
-
-        <div class="settings"></div>
-
-        <div class="scrollbar" id="style-1">
+        <div class="sidebar-sticky">
             <ul>
                 <li>
                     <a href="dashboard">
-                        <!-- <i class="bi bi-speedometer2 menu-icon"></i>  -->
-                        <i class="bi bi-grid-1x2 menu-icon"></i> 
+                        <i class="bi bi-grid-1x2 menu-icon"></i>
                         <span class="nav-text">Dashboard</span>
                     </a>
                 </li>
@@ -78,7 +72,7 @@
                     </a>
                 </li>
                 <!-- darkerlishadowdown -->
-                <li> 
+                <li class="darkerlishadowdown">
                     <a href="help">
                         <i class="bi bi-question menu-icon"></i>
                         <span class="nav-text">Help</span>
@@ -92,4 +86,6 @@
                     </a>
                 </li>
             </ul>
+        </div>
     </nav>
+</div>

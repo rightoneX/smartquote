@@ -76,4 +76,5 @@ switch ($error) {
             <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
         </p>
     </form>
+    
 </div>

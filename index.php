@@ -24,6 +24,8 @@ $nav = new Navigation($current_path);
   <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style/app.css">
 
+  <link rel="icon" href="/image/favicons/favicon.ico">
+
   <script src="js/pwa.js"></script>
 
   <title>sQuote</title>
@@ -31,10 +33,10 @@ $nav = new Navigation($current_path);
 
 <body>
   <?php
-  include 'includes/navigation.inc.php';
-
   if (isset($_SESSION["userid"])) {
     include 'includes/sidebar.inc.php';
+  } else {
+    include 'includes/navigation.inc.php';
   }
   ?>
 
@@ -51,4 +53,5 @@ $nav = new Navigation($current_path);
   <script src="pages/js/login.js"></script>
 
 </body>
+
 </html>

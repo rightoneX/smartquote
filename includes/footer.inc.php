@@ -7,5 +7,5 @@
         <li class="nav-item"><a href="features" class="nav-link px-2 text-muted">Features</a></li>
         <li class="nav-item"><a href="faq" class="nav-link px-2 text-muted">FAQs</a></li>
     </ul>
-    <p class="text-center text-muted">&copy; 2023 smart Quote Ltd</p>
+    <p class="text-center text-muted">&copy; 2023 smart Quote Ltd &middot; <a href="privacy">Privacy Policy</a> &middot; <a href="terms">Terms of Service</a></p>
 </footer>

@@ -80,7 +80,7 @@ class Users extends Database
 
     protected function updateProfile($data) // $name, $surename, $position, $dob,$phone, $id
     {
-        $sql = "UPDATE users SET name = ?, surename = ?, position = ?, dob = ?, phone=? WHERE id = ?";
+        $sql = "UPDATE users SET name = ?, surename = ?, position = ?, dob = ?, phone = ?, notification = ?, newsletter = ? WHERE id = ?";
         $stmt = $this->connect()->prepare($sql);
 
         if (!$stmt->execute($data)) {
