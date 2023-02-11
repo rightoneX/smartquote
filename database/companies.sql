@@ -24,4 +24,4 @@ CREATE TABLE `companies` (
 INSERT INTO companies
   ( name, trading_name, company_num, website, email, phone, industry_id, address_country_id, address_city, address_building, address_zip, description)
 VALUES
-  ( 'IGM', 'Interantainal Guy Managment', '32515315', 'https://igm.com', 'email@igm.com','+63 4322 435 64', '0100', 12, 'address_city' ,'address_building', '89234', 'company description')
+  ( 'IGM', 'Interantainal Guy Managment', '32515315', 'https://igm.com', 'email@igm.com','+63 4322 435 64', '1623', 12, 'address_city' ,'address_building', '89234', 'company description')

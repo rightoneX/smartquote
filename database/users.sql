@@ -22,7 +22,7 @@ CREATE TABLE `users` (
 INSERT INTO users
   (name, surename, dob, email, phone, company_id, position, notification, newsletter, password, permission)    
 VALUES 
-('Amit', 'Jana', '1994-12-12', 'amit@email.com', '64213645284', 0, 'staff', '1','0','$2y$10$NrOn2M5Lppw1zWMjaE/GGe/LhM2.dJya1HYla4vP9d8uCgye2YjPO',0),   
+('Amit', 'Jana', '1994-12-12', 'amit@email.com', '64213645284', 1, 'staff', '1','0','$2y$10$NrOn2M5Lppw1zWMjaE/GGe/LhM2.dJya1HYla4vP9d8uCgye2YjPO',0),   
 ('Alexa', 'Jana', '2004-12-22', 'alexa@email.com', '64219645284',0, 'staff',  '1','0', '$2y$10$NrOn2M5Lppw1zWMjaE/GGe/LhM2.dJya1HYla4vP9d8uCgye2YjPO',0), 
 ('Lynn', 'Jana', '2004-12-22', 'lynn@email.com','64293645284', 0, 'staff', '1', '0', '$2y$10$NrOn2M5Lppw1zWMjaE/GGe/LhM2.dJya1HYla4vP9d8uCgye2YjPO',0), 
 ('Merry', 'Jana', '2004-12-22', 'merry@email.com', '64210645284',0, 'staff', '1',  '0', '$2y$10$NrOn2M5Lppw1zWMjaE/GGe/LhM2.dJya1HYla4vP9d8uCgye2YjPO',0), 
