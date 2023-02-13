@@ -66,6 +66,12 @@
 
             <ul>
                 <li>
+                    <a href="company">
+                        <i class="bi bi-building menu-icon"></i>
+                        <span class="nav-text">My Company</span>
+                    </a>
+                </li>
+                <li>
                     <a href="profile">
                         <i class="bi bi-person menu-icon"></i>
                         <span class="nav-text">My Profile</span>
