@@ -42,6 +42,10 @@ class Navigation
             case '/statistics':
                 $this->page = 'pages/statistics.page.php';
                 break;
+                
+            case '/company':
+                $this->page = 'pages/company.page.php';
+                break;
 
             case '/profile':
                 $this->page = 'pages/profile.page.php';
@@ -84,7 +88,7 @@ class Navigation
                 $this->page =  'pages/about.page.php';
                 break;
 
-            // REST API 
+                // REST API 
             case '/api':
                 $this->page =  'pages/processing/api_v1.pro.php';
                 break;
