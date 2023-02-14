@@ -13,10 +13,27 @@ class Companies extends Database
             header("location: ../index.php?error= nocompayfound");
             exit();
         }
-        $user = $stmt->fetch();
+        $companies = $stmt->fetch();
         $stmt = null;
-        return $user; // return data
+        return $companies;
     }
 
+
+    protected function companyUpdate($data)
+    {
+        
+        $sql = "UPDATE companies SET  name = ?, trading_name = ?, company_number = ?,  ird_number = ?, website = ?,  email = ?, phone = ?, industry_id = ?, address_country_id = ?, address_city = ?,address_street = ?, address_building = ?,  address_zip = ?, logo = ?,  motto = ?, description = ? WHERE id = ?";
+
+
+        $stmt = $this->connect()->prepare($sql);
+
+        if (!$stmt->execute($data)) {
+            $stmt = null;
+            header("location: ../index.php?error=profilenotupdated");
+            exit();
+        }
+        $stmt = null;
+        return true;
+    }
 
 }

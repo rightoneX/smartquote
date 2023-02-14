@@ -9,6 +9,8 @@ class Navigation
         $path = parse_url($url);
         // $query = parse_url($url, PHP_URL_QUERY);
 
+        // $selected class="darkerlishadowdown
+
         switch ($path['path']) {
                 // restricted page
             case '/dashboard':
@@ -42,13 +44,17 @@ class Navigation
             case '/statistics':
                 $this->page = 'pages/statistics.page.php';
                 break;
-                
+
+            case '/profile':
+                $this->page = 'pages/profile.page.php';
+                break;
+
             case '/company':
                 $this->page = 'pages/company.page.php';
                 break;
 
-            case '/profile':
-                $this->page = 'pages/profile.page.php';
+            case '/product':
+                $this->page = 'pages/product.page.php';
                 break;
 
             case '/help':

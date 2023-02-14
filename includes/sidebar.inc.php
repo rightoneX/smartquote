@@ -42,7 +42,7 @@
                 </li>
                 <li>
                     <a href="companies">
-                        <i class="bi bi-building menu-icon"></i>
+                        <i class="bi bi-buildings menu-icon"></i>
                         <span class="nav-text">Companies</span>
                     </a>
                 </li>
@@ -66,19 +66,27 @@
 
             <ul>
                 <li>
+                    <a href="profile">
+                        <i class="bi bi-person menu-icon"></i>
+                        <span class="nav-text">My Profile</span>
+                    </a>
+                </li>
+                <li>
                     <a href="company">
                         <i class="bi bi-building menu-icon"></i>
                         <span class="nav-text">My Company</span>
                     </a>
                 </li>
                 <li>
-                    <a href="profile">
-                        <i class="bi bi-person menu-icon"></i>
-                        <span class="nav-text">My Profile</span>
+                    <a href="product">
+                        <i class="bi bi-diagram-3 menu-icon"></i>
+                        <span class="nav-text">My Product</span>
                     </a>
                 </li>
-                <!-- darkerlishadowdown -->
-                <li class="darkerlishadowdown">
+
+                <hr>
+                <!--class="darkerlishadowdown" darkerlishadowdown -->
+                <li >
                     <a href="help">
                         <i class="bi bi-question menu-icon"></i>
                         <span class="nav-text">Help</span>
