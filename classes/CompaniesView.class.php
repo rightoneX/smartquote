@@ -2,9 +2,9 @@
 
 class CompaniesView extends Companies
 {
-    public function getCompanyProfile($id)
+    public function getCompany($id)
     {
-        return $this->companyProfile($id);
+        return $this->get($id);
     }
 
 }

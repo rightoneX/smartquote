@@ -31,7 +31,7 @@ if (isset($_POST["submit"]) && isset($_SESSION["userid"])) {
     ];
                
     $update = new CompaniesController();
-    $update->recordUpdate($data);
+    $update->updateCompany($data);
 
     header("location: /company");
 }

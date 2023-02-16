@@ -8,7 +8,7 @@ $user_data = new UsersView();
 $user = $user_data->getUserProfile($_SESSION["userid"]);
 
 $company_data = new CompaniesView();
-$company = $company_data->getCompanyProfile($user->company_id);
+$company = $company_data->getCompany($user->company_id);
 
 $_SESSION["companyid"] = $user->company_id;
 
