@@ -4,8 +4,9 @@ class Database
 {
     private $host = "localhost:3306";
     private $user = "root";
-    private $pwd = "password";
+    // private $pwd = "password";
     // private $pwd = "Password!";
+    private $pwd = "pa55VorD!";
     private $dbname = "squote";
 
     protected function connect()
