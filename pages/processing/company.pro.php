@@ -11,8 +11,10 @@ if (isset($_POST["submit"]) && isset($_SESSION["userid"])) {
     // check entry
 
      $data = [
-        $name = $_POST["name"],
-        $trading_name = $_POST["trading_name"],
+        // $name = $_POST["name"],
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS),
+        // $trading_name = $_POST["trading_name"],
+        $trading_name = filter_input(INPUT_POST, 'trading_name', FILTER_SANITIZE_SPECIAL_CHARS),
         $company_number = $_POST["company_number"],
         $ird_number = $_POST["ird_number"],
         $website = $_POST["website"],

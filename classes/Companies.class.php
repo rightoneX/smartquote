@@ -21,7 +21,27 @@ class Companies extends Database
 
     protected function update($data)
     {
-        $sql = "UPDATE companies SET  name = ?, trading_name = ?, company_number = ?,  ird_number = ?, website = ?,  email = ?, phone = ?, industry_id = ?, address_country_id = ?, address_city = ?,address_street = ?, address_building = ?,  address_zip = ?, logo = ?,  motto = ?, description = ? WHERE id = ?";
+        $sql = "UPDATE 
+                    companies 
+                SET  
+                    name = ?, 
+                    trading_name = ?, 
+                    company_number = ?,  
+                    ird_number = ?, 
+                    website = ?,  
+                    email = ?, 
+                    phone = ?, 
+                    industry_id = ?, 
+                    address_country_id = ?, 
+                    address_city = ?,
+                    address_street = ?, 
+                    address_building = ?,  
+                    address_zip = ?, 
+                    logo = ?,  
+                    motto = ?, 
+                    description = ? 
+                WHERE 
+                    id = ?";
 
         $stmt = $this->connect()->prepare($sql);
 
