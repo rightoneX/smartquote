@@ -19,4 +19,4 @@ VALUES
 ('Relay Controller', 'RC', 'Switching Load Controller', 'images/img/relay_controller.jpg'),
 ('Dimmer Controller', 'RC', 'Relay Controllers', 'images/img/relay_controller.jpg'),
 ('Relay Controllers', 'RC', 'Relay Controllers', 'images/img/relay_controller.jpg'),
-('Relay Controllers', 'RC', 'Relay Controllers', 'images/img/relay_controller.jpg'),
+('Relay Controllers', 'RC', 'Relay Controllers', 'images/img/relay_controller.jpg')
