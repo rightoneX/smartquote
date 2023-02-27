@@ -4,7 +4,18 @@ module.exports = {
             './pages/*.php',
           './*.php'],
   theme: {
-    extend: {},
+    screens:{
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px'
+
+    },
+    extend: {
+      colors: {
+        logoStyle: '#23642'
+      }
+    },
   },
   plugins: [],
 }

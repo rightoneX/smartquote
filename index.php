@@ -38,15 +38,17 @@ $nav = new Navigation($current_path);
 
 <body>
   <?php
-  if (isset($_SESSION["userid"])) {
-    include 'includes/sidebar.inc.php';
-  } else {
+  // if (isset($_SESSION["userid"])) {
+  //   include 'includes/sidebar.inc.php';
+  // } else {
     include 'includes/navigation.inc.php';
-  }
+  // }
   ?>
 
   <div class="page-content">
-    <?php include $nav->page; ?>
+    <?php 
+    // include $nav->page; 
+    ?>
   </div>
 
   <div class="footer">
