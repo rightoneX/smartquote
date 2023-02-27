@@ -10,5 +10,11 @@
 >sudo apt-get install php-common php-mysql php-cli
 '''
 
+- install tailwind
+-- npm i -D tailwindcss
+- create tailwind config file
+-- npx tailwindcss init
+
+
 # Icons provided by https://icons.getbootstrap.com/
 

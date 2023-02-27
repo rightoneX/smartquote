@@ -21,8 +21,13 @@ $nav = new Navigation($current_path);
   <link rel="apple-touch-icon" href="images/logo192.png" type="image/x-icon">
 
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style/app.css">
+
+  <!-- bootstrap -->
+  <!-- <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="style/custom/app.css"> -->
+
+  <!-- tailwind -->
+  <link rel="stylesheet" href="css/main.css">
 
   <link rel="icon" href="/image/favicons/favicon.ico">
 
